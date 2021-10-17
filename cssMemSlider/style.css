@@ -4,7 +4,7 @@ body {
 
 .container {
   max-width: 800px;
-  margin: 0 auto;
+  margin: 20vh auto;
 }
 
 .carousel {
@@ -52,12 +52,89 @@ input[type=radio]:nth-child(4):checked ~ .slider .slide-track {
 .panel {
   display: flex;
   justify-content: space-between;
+  margin-top: 1rem;
 }
 
 .captions {
   overflow: hidden;
+  height: 1rem;
+  color: #ffffff;
+  font-family: 'Verdana', sans-serif;
 }
 
 .captions .caption {
-  transform: translateY(1em);
+  transform: translateY(-5rem);
+  transition: all ease-out 0.4s;
+  opacity: 0;
 }
+
+input[type=radio]:first-child:checked ~ .panel .caption:first-child {
+  transform: translateY(0rem);
+  opacity: 1;
+}
+
+input[type=radio]:first-child:checked ~ .panel .caption:first-child ~ .caption {
+  transform: translateY(2rem);
+}
+
+input[type=radio]:nth-child(2):checked ~ .panel .caption:nth-child(2) {
+  transform: translateY(-1.2rem);
+  opacity: 1;
+}
+
+input[type=radio]:nth-child(2):checked ~ .panel .caption:nth-child(2) ~ .caption {
+  transform: translateY(2rem);
+}
+
+input[type=radio]:nth-child(3):checked ~ .panel .caption:nth-child(3) {
+  transform: translateY(-2.4rem);
+  opacity: 1;
+}
+
+input[type=radio]:nth-child(3):checked ~ .panel .caption:nth-child(3) ~ .caption {
+  transform: translateY(2rem);
+}
+
+input[type=radio]:nth-child(4):checked ~ .panel .caption:nth-child(4) {
+  transform: translateY(-3.6rem);
+  opacity: 1;
+}
+
+input[type=radio]:nth-child(4):checked ~ .panel .caption:nth-child(4) ~ .caption {
+  transform: translateY(2rem);
+}
+
+.dots {
+  display: flex;
+}
+
+.dots .dot {
+  height: 0.5rem;
+  width: 0.5rem;
+  border: 2px #5164E3 solid;
+  background-color: #5164E3;
+  border-radius: 50%;
+  margin: 0.5rem;
+  cursor: pointer;
+  /* transform: translate(); */
+  transition: all ease-out 0.4s;
+}
+
+.dots .dot:hover {
+  border-color: #ffffff;
+  background-color: #ffffff;
+}
+
+#img1:checked ~ .panel .dot[for=img1],
+#img2:checked ~ .panel .dot[for=img2],
+#img3:checked ~ .panel .dot[for=img3],
+#img4:checked ~ .panel .dot[for=img4] {
+  background-color: transparent;
+}
+
+/* #img1:checked ~ .panel .dot[for=img1]:hover,
+#img2:checked ~ .panel .dot[for=img2]:hover,
+#img3:checked ~ .panel .dot[for=img3]:hover,
+#img4:checked ~ .panel .dot[for=img4]:hover {
+  background-color: #ffffff;
+} */
