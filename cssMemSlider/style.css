@@ -5,8 +5,14 @@ body {
 }
 
 .container {
-  max-width: 50rem;
+  max-width: 45%;
   margin: 0 auto;
+}
+
+@media (max-width: 1500px) {
+  .container {
+    max-width: 60%;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -19,19 +25,19 @@ body {
   width: 100%;
 }
 
-.carousel input[type=radio] {
+.carousel input[type="radio"] {
   display: none;
 }
 
-input[type=radio]:nth-child(2):checked ~ .slider .slide-track {
+input[type="radio"]:nth-child(2):checked ~ .slider .slide-track {
   transform: translateX(-25%);
 }
 
-input[type=radio]:nth-child(3):checked ~ .slider .slide-track {
+input[type="radio"]:nth-child(3):checked ~ .slider .slide-track {
   transform: translateX(-50%);
 }
 
-input[type=radio]:nth-child(4):checked ~ .slider .slide-track {
+input[type="radio"]:nth-child(4):checked ~ .slider .slide-track {
   transform: translateX(-75%);
 }
 
@@ -39,7 +45,7 @@ input[type=radio]:nth-child(4):checked ~ .slider .slide-track {
   width: 100%;
   height: 30rem;
   overflow: hidden;
-  border-radius: 8px;
+  border-radius: 0.5em;
 }
 
 @media (max-width: 900px) {
@@ -95,19 +101,19 @@ input[type=radio]:nth-child(4):checked ~ .slider .slide-track {
 }
 
 .slide:first-child {
-  background-image: url('assets/slide1.jpg');
+  background-image: url("assets/slide1.jpg");
 }
 
 .slide:nth-child(2) {
-  background-image: url('assets/slide2.jpg');
+  background-image: url("assets/slide2.jpg");
 }
 
 .slide:nth-child(3) {
-  background-image: url('assets/slide3.png');
+  background-image: url("assets/slide3.png");
 }
 
 .slide:nth-child(4) {
-  background-image: url('assets/slide4.jpg');
+  background-image: url("assets/slide4.jpg");
 }
 
 .panel {
@@ -127,7 +133,7 @@ input[type=radio]:nth-child(4):checked ~ .slider .slide-track {
   overflow: hidden;
   height: 1.1rem;
   color: #ffffff;
-  font-family: 'Arial', sans-serif;
+  font-family: "Arial", sans-serif;
 }
 
 @media (max-width: 1024px) {
@@ -145,39 +151,51 @@ input[type=radio]:nth-child(4):checked ~ .slider .slide-track {
   height: 1rem;
 }
 
-input[type=radio]:first-child:checked ~ .panel .caption:first-child {
+input[type="radio"]:first-child:checked ~ .panel .caption:first-child {
   transform: translateY(0rem);
   opacity: 1;
 }
 
-input[type=radio]:first-child:checked ~ .panel .caption:first-child ~ .caption {
+input[type="radio"]:first-child:checked
+  ~ .panel
+  .caption:first-child
+  ~ .caption {
   transform: translateY(2rem);
 }
 
-input[type=radio]:nth-child(2):checked ~ .panel .caption:nth-child(2) {
+input[type="radio"]:nth-child(2):checked ~ .panel .caption:nth-child(2) {
   transform: translateY(-1rem);
   opacity: 1;
 }
 
-input[type=radio]:nth-child(2):checked ~ .panel .caption:nth-child(2) ~ .caption {
+input[type="radio"]:nth-child(2):checked
+  ~ .panel
+  .caption:nth-child(2)
+  ~ .caption {
   transform: translateY(2rem);
 }
 
-input[type=radio]:nth-child(3):checked ~ .panel .caption:nth-child(3) {
+input[type="radio"]:nth-child(3):checked ~ .panel .caption:nth-child(3) {
   transform: translateY(-2rem);
   opacity: 1;
 }
 
-input[type=radio]:nth-child(3):checked ~ .panel .caption:nth-child(3) ~ .caption {
+input[type="radio"]:nth-child(3):checked
+  ~ .panel
+  .caption:nth-child(3)
+  ~ .caption {
   transform: translateY(2rem);
 }
 
-input[type=radio]:nth-child(4):checked ~ .panel .caption:nth-child(4) {
+input[type="radio"]:nth-child(4):checked ~ .panel .caption:nth-child(4) {
   transform: translateY(-3rem);
   opacity: 1;
 }
 
-input[type=radio]:nth-child(4):checked ~ .panel .caption:nth-child(4) ~ .caption {
+input[type="radio"]:nth-child(4):checked
+  ~ .panel
+  .caption:nth-child(4)
+  ~ .caption {
   transform: translateY(2rem);
 }
 
@@ -196,7 +214,7 @@ input[type=radio]:nth-child(4):checked ~ .panel .caption:nth-child(4) ~ .caption
 .dots .dot .dot-inner {
   height: 50%;
   width: 50%;
-  border: 2px #7ab4f7 solid;
+  border: 0.125em #7ab4f7 solid;
   background-color: #7ab4f7;
   border-radius: 50%;
   margin: 14%;
@@ -213,9 +231,9 @@ input[type=radio]:nth-child(4):checked ~ .panel .caption:nth-child(4) ~ .caption
   background-color: #aaaaaa;
 }
 
-#img1:checked ~ .panel .dot[for=img1] .dot-inner,
-#img2:checked ~ .panel .dot[for=img2] .dot-inner,
-#img3:checked ~ .panel .dot[for=img3] .dot-inner,
-#img4:checked ~ .panel .dot[for=img4] .dot-inner {
+#img1:checked ~ .panel .dot[for="img1"] .dot-inner,
+#img2:checked ~ .panel .dot[for="img2"] .dot-inner,
+#img3:checked ~ .panel .dot[for="img3"] .dot-inner,
+#img4:checked ~ .panel .dot[for="img4"] .dot-inner {
   background-color: transparent;
 }
